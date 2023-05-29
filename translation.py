@@ -74,5 +74,5 @@ extensions = dict(images=('jpeg', 'png', 'jpg', 'svg'),
                   archive=('zip', 'rar', 'gz', 'tar'),
                   other=())
 
-if __name__ == '__main__':
-    pass
+'''if __name__ == '__main__':
+    pass'''
