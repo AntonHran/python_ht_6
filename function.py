@@ -76,14 +76,12 @@ def move_to(old_path: str, new_path: str, file_name: str, ext: str) -> None:
         os.rmdir(old_path)
 
 
-def make_dir(path_to: str) -> bool:
+def make_dir(path_to: str) -> None:
     if os.path.exists(path_to):
         for key in extensions:
             try:
                 os.makedirs('\\'.join((path_to, key.title())))
             except FileExistsError:
                 continue
-        return True  # ?
     else:
         print('Something went wrong. Check a validity of the entered path.')
-        return False  # ?
