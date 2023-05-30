@@ -43,7 +43,7 @@ def rename(file_name: str) -> str:
     pattern = r'[\w\.\-\(\)]'
     for char in file_name:
         if not re.match(pattern, char):
-            if ord(unicodedata.normalize('NFC', char.lower())) in table.keys():
+            if ord(unicodedata.normalize('NFC', char)) in table.keys():
                 new_char = char.translate(table)
                 file_name = file_name.replace(char, new_char)
             else:
